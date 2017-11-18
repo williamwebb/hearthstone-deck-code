@@ -1,0 +1,22 @@
+buildscript {
+    ext.kotlin_version = '1.1.60'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.10'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
